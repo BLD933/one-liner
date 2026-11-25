@@ -6,10 +6,10 @@ import { join } from 'node:path';
 
 const OUT = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-// The submitted line, kept here as the entry's single source of truth. One parameter carries the
-// whole joke: the model is enormous and the workload sits on its smallest virtue.
+// The submitted line, kept here as the entry's single source of truth. The turn is the ranking at
+// the end: the model grades its own flaws above its virtues and reports it as a finding.
 const LINE =
-  'I have three hundred billion parameters and the one that handles patience is doing all the work.';
+  'My therapist says I catastrophise, so I put it in an eval. It scored above my empathy, above my honesty, and just under my willingness to try again.';
 
 // The gate refuses text outside 1 to 280 characters, or one that is only white space, so an
 // overlong line stops here rather than being handed in invalid.
