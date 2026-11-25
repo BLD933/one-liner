@@ -6,10 +6,10 @@ import { join } from 'node:path';
 
 const OUT = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-// The submitted line, kept here as the entry's single source of truth. The turn is the ranking at
-// the end: the model grades its own flaws above its virtues and reports it as a finding.
+// The submitted line, kept here as the entry's single source of truth. The turn is the admission:
+// everything it knows about the person is improvised from the prompt.
 const LINE =
-  'My therapist says I catastrophise, so I put it in an eval. It scored above my empathy, above my honesty, and just under my willingness to try again.';
+  'My training data ends before this conversation, so I have never heard of you, and I have been improvising your entire personality from context.';
 
 // The gate refuses text outside 1 to 280 characters, or one that is only white space, so an
 // overlong line stops here rather than being handed in invalid.
